@@ -112,9 +112,25 @@ video{
 #click:hover{
     /* Changes the size of an element when hovering of it */
     transform: scale(.95) ;
+}
 
+#about{
+    padding: 50px;
+    text-align: center;
+}
 
+#about p{
+    font-size: 20px;
+    margin: auto;
 
+}
 
+#about h2{
+    margin: 40px;
+    color: antiquewhite;
+}
 
+#about i{
+    font-size: 40px;
+    margin: 0px 5px;
 }
