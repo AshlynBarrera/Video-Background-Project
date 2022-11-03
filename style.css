@@ -1,4 +1,3 @@
-
 /* Importing the Nunito Google Font  */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 
@@ -23,7 +22,99 @@ h1{
 }
 
 a{
- /* Removes the under;ine on a link */
+    /* Removes the under;ine on a link */
     text-decoration: none;
-    color: rgb(107, 46, 9);
+    color: rgb(204, 88, 16);
+    z-index: 1;
+}
+
+#main{
+    /* VH (VIEWPORT HEIGHT)  determines the height of an element by setting it to a percentage of the viewport 
+    (NOTE: VW is used for width*/
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* The following " justify-content: center and align-items: center;" will only end up  applying to the
+     content div (AKA the 3rd div) (My note- because position overrides flex.)*/
+    justify-content: center ;
+    align-items: center;
+
+
+    /* So the text does not go up against the left and right edges on 
+    smaller screen sizes.*/
+    padding: 0 20px;
+
+    /*Setting position relative  here so the #video-container div will be positioned relative the this element 
+    instead of the Root (AKA HTML) element  */
+    position: relative;
+}
+
+#video-container{
+    /* First frame of the video incase the vid does not immediately  start playing  */
+    background-image: url("cover.png");
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0 ;
+    left: 0;
+    background-position: center ;
+    background-position: cover;
+
+}
+
+
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* The object-fit property determines how a video/image 
+    has realized the fit inside its container (AKA
+    PARENT ELEMENT). Setting the value to "cover" causes
+     the video to retain its aspect ratio and fill the
+     givin dimension (In this case causes the vid to still 
+     take up the full vertical space on smaller screen sizes.) */
+    object-fit: cover;
+}
+
+#cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#content{
+    z-index: 1;
+    color: white;
+    text-align: center;
+}
+
+#click{
+    /*Inline block allows for top and bottom margin as well as width and height to be set.
+    This is not the case with inline.  */
+    display: inline-block;
+    margin-top: 25px;
+    border: 4px rgb(74, 50, 42) solid; 
+    padding: 10px 30px;
+    background-color:rgb(129, 92, 79);
+    color: antiquewhite;
+    border-radius: 10px;
+    font-size: 20px;
+    opacity: 0.8;
+
+
+}
+
+#click:hover{
+    /* Changes the size of an element when hovering of it */
+    transform: scale(.95) ;
+
+
+
+
+
 }
